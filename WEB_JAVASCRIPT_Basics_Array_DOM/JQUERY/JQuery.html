@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+     #panel, #flip {
+                    padding: 5px;
+  text-align: center;
+  background-color: #ccecee;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+.blue {
+  color: blue;
+}
+    </style>
+</head>
+<script>
+    // 31-08-2021
+    $(document).ready(function(){
+        $("p").click(function(){
+            $(this).hide();
+        })
+    })
+
+    //Mouse enter event
+
+    $(document).ready(function(){
+        $("#p1").mouseenter(function(){
+            alert("MOuse enter event display");
+        })
+    })
+
+    //Focus
+
+    $(document).ready(function(){
+        $("input").focus(function(){
+            $(this).css("background-color","red");
+        })
+    })
+
+    //ON Method
+
+    $(document).ready(function(){
+        $("p").on({mouseenter: function(){
+            $(this).css("background-clor","Yellow");
+        }
+        })
+    })
+
+    //Hide and show
+
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#p2").hide();
+        })
+    })
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            $("#p2").show();
+        })
+    })
+
+    //Toggle 
+
+    $(document).ready(function(){
+        $("#b3").click(function(){
+            $("#p3").toggle();
+        })
+    })
+
+    //Fade in
+
+    $(document).ready(function(){
+        $("#b4").click(function(){
+            $("#div1").fadeIn();
+        })
+    })
+    $(document).ready(function(){
+        $("#b4").click(function(){
+            $("#div2").fadeIn(3000);
+        })
+    })
+
+    //Fade Out
+
+    $(document).ready(function(){
+        $("#b5").click(function(){
+            $("#div1").fadeOut();
+        })
+    })
+
+    //Fade Toggle
+
+    $(document).ready(function(){
+        $("#b6").click(function(){
+            $("#div3").fadeToggle();
+        })
+    })
+
+    //Fade To
+
+    $(document).ready(function(){
+        $("#b7").click(function(){
+            $("#div1").fadeTo("slow",0.15);
+        })
+    })
+
+   /
+    //slide Toggle
+
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        })
+    })
+
+    //animate method
+
+    $(document).ready(function(){
+        $("#b8").click(function(){
+            $("#div4").animate({left: '250px'});
+        })
+    })
+
+    //animate toggle
+
+    $(document).ready(function(){
+        $("#b9").click(function(){
+            $("#div5").animate({height:'toggle'});
+        })
+    })
+
+    //queue animate functionality
+
+    $(document).ready(function(){
+        $("#b10").click(function(){
+            var div=$("#div6");
+            div.animate({left: '100px'},"slow");
+            div.animate({fontSize: '3em'},"slow");
+        })
+    })
+
+    //get content --Text,html,val,attr
+
+    $(document).ready(function(){
+        $("#b11").click(function(){
+            alert("Text: "+$("#p4").text());
+        })
+    })
+   
+    $(document).ready(function(){
+        $("#b12").click(function(){
+            alert("Text: "+$("#p4").html());
+        })
+    })
+    $(document).ready(function(){
+        $("#b13").click(function(){
+            alert("Text: "+$("#in").val());
+        })
+    })
+    $(document).ready(function(){
+        $("#b14").click(function(){
+            alert("Text: "+$("#gdt").attr("href"));
+        })
+    })
+
+    //set content text,html,value
+
+    $(document).ready(function(){
+        $("#b15").click(function(){
+          $("#p5").text("New Text Content");
+        })
+    })
+    $(document).ready(function(){
+        $("#b16").click(function(){
+          $("#p6").html("<b>New Text Content</b>");
+        })
+    })
+    $(document).ready(function(){
+        $("#b17").click(function(){
+          $("#in1").val("Prajakta");
+        })
+    })
+
+    //Add Append
+
+    $(document).ready(function(){
+        $("#b18").click(function(){
+            $("#p7").append("New Text");
+        })
+    })
+
+    $(document).ready(function(){
+        $("#b19").click(function(){
+            $("#list").append("<li>Amit</li>");
+        })
+    })
+
+    //Add Prepend
+
+    $(document).ready(function(){
+        $("#b20").click(function(){
+            $("#p7").prepend("New Text");
+        })
+    })
+
+    $(document).ready(function(){
+        $("#b21").click(function(){
+            $("#list").prepend("<li>Prajakta</li>");
+        })
+    })
+
+    //Remove
+
+    $(document).ready(function(){
+        $("#b22").click(function(){
+            $("#div7").remove();
+        })
+    })
+
+    //Empty
+
+    $(document).ready(function(){
+        $("#b23").click(function(){
+            $("#div7").empty();
+        })
+    })
+
+    //add css classes
+
+    $(document).ready(function(){
+        $("#b24").click(function(){
+            $("#p8").addClass("blue")
+        })
+    })
+
+    //remove css classes
+
+    $(document).ready(function(){
+        $("#b25").click(function(){
+            $("#p8").removeClass("blue")
+        })
+    })
+
+    //jquery css
+
+    $(document).ready(function(){
+        $("#b26").click(function(){
+            $("#p9").css("background-color","yellow");
+        })
+    })
+
+    //01-09-2021
+
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $("#div8").load("ajaxtest.txt");
+        })
+    })
+
+</script>
+<body>
+    <p>index tutorial</p>
+    <p id="p1">mouse enter event</p>
+    Name: <input type="text" name="Name"><br>
+    <p id="p2" >ON method</p>
+    <button type="button" id="b1">Hide</button>
+    <button type="button" id="b2">Show</button><br><br>
+    <button type="button" id="b3">Toggle</button>
+    <p id="p3">Testing toggle Text</p>
+    <button type="button" id="b4">Fade In</button><br><br>
+    <button type="button" id="b5">Fade Out</button><br><br>
+    <button type="button" id="b6">Fade Toggle</button><br><br>
+    <button type="button" id="b7">Fade To</button><br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:rgb(0, 247, 255);"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:rgb(0, 255, 64);"></div><br>
+    <div id="flip">Slide Down panel</div>
+    <div id="panel">Show panel</div><br>
+    <button type="button" id="b8">Animate to left</button><br><br>
+    <div id="div4" style="background:#98bf21;height:100px;width:100px;  "></div><br><br>
+    <button type="button" id="b9">Toggle animation</button><br><br>
+    <div id="div5" style="width:80px;height:80px;display:none;background-color:rgb(255, 166, 0);"></div><br><br>
+    <button type="button" id="b10">Start queue</button><br><br>
+    <div id="div6" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div><br><br>
+    <p id="p4">Content <b>test</b> for get</p><br>
+    <button type="button" id="b11">Show text</button>
+    <button type="button" id="b12">Display html</button><br><br>
+    <input type="text" id="in" value="Suchit"><br><br>
+    <button type="button" id="b13">Display Value</button>
+    <p><a href="http://godigitaltc.com/" id="gdt">Go Digital Technology</a></p>
+    <button type="button" id="b14">Display Link</button>
+    <p id="p5">Text content</p>
+    <p id="p6">Html content</p>
+    <input type="text" id="in1" value="Suchit">
+    <button type="button" id="b15">Set Text</button>
+    <button type="button" id="b16">Set Html</button>
+    <button type="button" id="b17">Set Value</button><br><br>
+    <p id="p7">Append Test</p>
+    <ol id="list" >
+        <li>SUchit</li>
+        <li>Devesh</li>
+    </ol>
+    <button type="button" id="b18">Append Text to paragraph</button>
+    <button type="button" id="b19">Append To list</button>
+    <button type="button" id="b20">Prepend Text to paragraph</button>
+    <button type="button" id="b21">Prepend To list</button><br><br>
+    <div id="div7" style="height:100px;width:300px;border:1px solid black;background-color:rgb(0, 225, 255);">
+
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+        
+        </div>
+    <button type="button" id="b22">Remove Div</button>
+    <button type="button" id="b23">Empty Div</button>
+    <p id="p8">Test add Class</p>
+    <button type="button" id="b24">Add Class</button>
+    <button type="button" id="b25">Remove Class</button><br>
+    <p id="p9" style="background-color:#ff0000">This is a paragraph.</p>
+    <button type="button" id="b26">Change Background color</button>
+    <div>
+        <div>
+            <ul>
+                <li>
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 01-09-2021 -->
+    <div id="div8">New day at work</div>
+    <button id="btn">Ajax Data loading</button>
+</body>
+</html>
