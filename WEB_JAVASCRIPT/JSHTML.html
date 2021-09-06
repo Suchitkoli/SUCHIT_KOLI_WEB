@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:focus, a:active {
+             color: green;
+            }
+            .mystyle {
+  width: 300px;
+  height: 50px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+}
+.democlass {
+  color: red;
+}
+        </style>
+    </head>
+    <body>
+        <p id="add"></p>
+        <p id="multiplication"></p>
 
+        <p id="button">My heading</p>
+        <button type="button" onmouseover ="document.getElementById('button').style.color='red'">Today's Date</button>
+        <p id="obj"></p>
+        <p id="str"></p>
+        <p id="str1"></p>
+        <p id="str2"></p>
+        <button type="button" onclick="function1()">Text replace</button>
+        <p id="str3">String Typescript</p>
+        <button type="button" onclick="function2()">Upper case</button>
+        <p id="str4">String uppercase</p>
+        <P id="str5"></P>
+        <p id="arr"></p>
+        <p id="arr1"></p>
+        <button type="button" onclick="function3()">Add element in Array</button>
+        <p id="arr2"></p>
+        <p id="arr3"></p>
+        <p id="arr4"></p>
+        <p id="arr5"></p>
+        <p id="arr6"></p>
+        <p id="arr7"></p>
+        <p id="arr8"></p>
+        <button type="button" onclick="function4()">Splicing</button>
+        <p id="arr9"></p>
+        <p id="arr10"></p>
+        <p id="arr11"></p>
+        <!-- 25-08-2021 -->
+        <p id="arr12"></p>
+        <p id="arr13"></p>
+        <p id="arr14"></p>
+        <p id="arr15"></p>
+        <p id="arr16"></p>
+        <p id="fr" ></p>
+        <p id="ex"></p>
+        <!-- 30-08-2021 -->
+        <button id="btn1">Event listener</button>
+        <p id="dom"></p>
+        <ul id="mylist" >
+            <li>suchit</li>
+            <li>Devesh</li>
+        </ul>
+        <button type="button" onclick="function10()">Append</button><br><br>
+        <button type="button" id="btn" onclick="function11()">Check Attribute</button>
+        <p id="dom1"></p>
+        <a id="link" href="http://godigitaltc.com/">Go Digital Technology</a>
+        <input type="button" onclick="function12()" value="Focus" >
+        <input type="button" onclick="function13()" value="blur">
+        <br><br>
+        <button type="button" onclick="function14()">Check Child Elements</button>
+        <div id="mydiv">
+            <p>First Element inside div</p>
+            <p>Second element inside div</p>
+        </div>
+        <p id="dom2"></p>
+        <br>
+        <button type="button" onclick="function15()">child nodes</button>
+        <p id="dom3"></p>
+        <button type="button" onclick="function16()">Div Style</button>
+        <div id="div1">
+            Content inside div......
+        </div><br>
+        <input id="dom4" type="checkbox" onmouseover="function17()" onclick="alert('click event occured')">
+
+        <button onclick="myFunction('myList1','myList2')">Compare List 1 and 2</button>
+        <button onclick="myFunction('myList1','myList3')">Compare List 1 and 3</button>
+
+        <ul id="myList1"><li>Suchit</li><li>Devesh</li></ul>
+        List 2:
+        <ul id="myList2"><li>Prajakta</li><li>Amit</li></ul>
+        List 3:
+        <ul id="myList3"><li>Suchit</li><li>Devesh</li></ul>
+        <p id="dom5"></p>
+        <br>
+        <button onclick="function18()">Close function</button> <br>
+        <p id="dom6"></p>
+        <button type="button" onclick="function19()">baseURI</button>
+        <p id="dom7"></p>
+        <button type="button" onclick="function20()">Change background-color</button> <br><br>
+        <button type="button" onclick="function21()">Character set</button>
+        <p id="dom8" ></p>
+        <h1>Create Attribute</h1>
+        <button type="button" onclick="function22()">Change header color</button><br><br>
+        <button type="button" onclick="function23()">Create new Button</button><br><br>
+        <button type="button" onclick="function24()">Document Element</button>
+        <p id="dom9"></p>
+        <span style="color:red">My span</span>
+        <h2 id="myH2">My Header</h2>
+        <button type="button" onclick="function25()">Move span</button>
+        
+            <script src="Javascript.js"></script>
+       
+            
+    </body>
+</html>
